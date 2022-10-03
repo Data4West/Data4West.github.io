@@ -1,0 +1,202 @@
+:root{
+    --color--base: rgb(213,176,20);
+}
+
+@font-face {
+    font-family: roboto;
+    src: url('/font/Roboto/Roboto-Regular.ttf');
+}
+
+.services{
+    background-color: rgb(0, 0, 0);
+    max-width: 100vw;
+    display: flex;
+    position: static;
+    top: 4.3rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin: 0;
+    gap: 2rem;
+}
+
+.services::-webkit-scrollbar{
+    -webkit-appearance: none;
+    background-color: black;
+    border: 2px solid black;
+    
+}
+.services::-webkit-scrollbar-button:increment,
+.services::-webkit-scrollbar-button {
+    display: none;
+} 
+.services::-webkit-scrollbar:horizontal {
+    height: 15px;
+}
+.services::-webkit-scrollbar-thumb {
+    background-color: rgb(212,175,19);
+    border: 2px solid black;
+    border-radius: 100px;
+   
+}
+
+.services ul{
+    min-width: 10rem;
+    min-height: 20rem;
+    border-radius: 10px;
+    background-color: rgb(212,175,19);
+    
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+    margin-right: 1rem;
+    margin-left: 1rem;
+
+    transition: all 0.5s;
+}
+
+.services button{
+    border-radius: 40px;
+    height: 3rem;
+    width: 8rem;
+    border: none;
+    font-size: 12pt;
+    font-weight: 600;
+    background-color: var(--color--base);
+    
+
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.services ul:hover{
+    color: var(--color--base);
+    background-color: black;
+    border: 5px solid;
+    border-color: var(--color--base);
+}
+
+.services button:hover{
+    color: var(--color--base);
+}
+
+.services button::after{
+    content: "";
+    background-color: black;
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: 100%;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.services button:hover::after{
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+
+
+/*media mobile*/
+
+@media (max-width:768px) and (min-width:320px) {
+    .services{
+        background-color: rgb(0, 0, 0);
+        max-width: 100vw;
+        display: flex;
+        position: static;
+        top: 4.3rem;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        margin: 0;
+        gap: 2rem;
+    }
+    
+    .services::-webkit-scrollbar{
+        -webkit-appearance: none;
+        background-color: black;
+        border: 2px solid black;
+        
+    }
+    .services::-webkit-scrollbar-button:increment,
+    .services::-webkit-scrollbar-button {
+        display: none;
+    } 
+    .services::-webkit-scrollbar:horizontal {
+        height: 15px;
+    }
+    .services::-webkit-scrollbar-thumb {
+        background-color: rgb(212,175,19);
+        border: 2px solid black;
+        border-radius: 100px;
+       
+    }
+    
+    .services ul{
+        min-width: 10rem;
+        min-height: 20rem;
+        border-radius: 10px;
+        background-color: rgb(212,175,19);
+        
+        padding: 1rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+        flex-direction: column;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+}
+
+@media (min-width:1024px) {
+    .services ul:hover{
+        color: var(--color--base);
+        background-color: black;
+        border: 5px solid;
+        border-color: var(--color--base);
+    }
+
+    .services button:hover{
+        color: var(--color--base);
+    }
+    
+    .services button::after{
+        content: "";
+        background-color: black;
+        position: absolute;
+        z-index: -1;
+        padding: 16px 20px;
+        display: block;
+        top: 0;
+        bottom: 0;
+        left: -100%;
+        right: 100%;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+    
+    .services button:hover::after{
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+
+}
+
